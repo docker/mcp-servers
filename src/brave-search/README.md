@@ -40,10 +40,12 @@ Add this to your `claude_desktop_config.json`:
 {
   "mcpServers": {
     "brave-search": {
-      "command": "npx",
+      "command": "docker",
       "args": [
-        "-y",
-        "@modelcontextprotocol/server-brave-search"
+        "run",
+        "-e",
+        "BRAVE_API_KEY=$BRAVE_API_KEY",
+        "vonwig/mcp-server-brave-search"
       ],
       "env": {
         "BRAVE_API_KEY": "YOUR_API_KEY_HERE"
@@ -51,6 +53,14 @@ Add this to your `claude_desktop_config.json`:
     }
   }
 }
+```
+
+## Build
+
+Docker build:
+
+```bash
+docker build -t vonwig/brave-search:mcp -f src/brave-search/Dockerfile .
 ```
 
 ## License

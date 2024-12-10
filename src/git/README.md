@@ -193,6 +193,15 @@ If you are doing local development, there are two ways to test your changes:
 }
 ```
 
+## Build
+
+Docker build:
+
+```bash
+cd src/git
+docker build -t vonwig/mcp-git .
+```
+
 ## License
 
 This MCP server is licensed under the MIT License. This means you are free to use, modify, and distribute the software, subject to the terms and conditions of the MIT License. For more details, please see the LICENSE file in the project repository.

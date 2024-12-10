@@ -122,6 +122,14 @@ Add the following to your `claude_desktop_config.json`:
 }
 ```
 
+## Build
+
+Docker build:
+
+```bash
+docker build -t vonwig/gitlab:mcp -f src/gitlab/Dockerfile .
+```
+
 ## Environment Variables
 
 - `GITLAB_PERSONAL_ACCESS_TOKEN`: Your GitLab personal access token (required)
